@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Portfolio</title>
+  <title>Jaeyeon Park's Portfolio</title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
     <div class="skills container">
       <div class="skill-top">
         <h1 class="section-title">Sk<span>i</span>lls</h1>
-        <h2>Dedicated and Efficient Full Stack Development Skills.
+        <h2>Dedicated and Efficient Full Stack Development.
         User Experience is key! From the beginning to the end of design,
         I build user friendly web applications that will satisfy
         customer software development expectations.</h2>
@@ -201,12 +201,16 @@
       <div class="contact-items">
         <div class="contact-item">
           <form>
-            <input type="text" id="fname" name="firstname" placeholder="Your Name">
-            <input type="text" id="lname" name="lastname" placeholder="Email">
+            <input type="text" id="name" name="name" class="name" placeholder="Your Name">
+            <input type="text" id="email" name="email" class="email" placeholder="Email">
             
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="message" name="message" class="message" placeholder="Write something.." style="height:200px"></textarea>
             
-            <input type="submit" value="Submit">
+            <fieldset>
+              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" class="submit">
+                Submit
+              </button>
+            </fieldset>
           </form>
         </div>
       </div>
@@ -249,6 +253,50 @@
   </section> -->
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_LXVMHh59MSiUb9DMBAdOg");
+    })();
+  </script>
+  <script type="text/javascript">
+    /*
+      User ID
+      user_LXVMHh59MSiUb9DMBAdOg
+      Access Token
+      128691838ac1fbb270e9489551a6b5f2
+    */
+    function validate() {
+      let name = document.querySelector(".name")
+      let email = document.querySelector(".email")
+      let msg = document.querySelector(".message")
+      let btn = document.querySelector(".submit")
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        if(name.value === "" || email.value === "" || msg.value === "") {
+          alert("Fill the empty sections")
+        }
+        else {
+          sendmail(name.value, email.value, msg.value);
+          document.querySelector(".name").value = ""
+          document.querySelector(".email").value = ""
+          document.querySelector(".message").value = ""
+          alert("Sent!")
+        }
+      })
+    }
+    validate()
+
+    function sendmail(name, email, msg) {
+      emailjs.send("service_vez81uu", "template_t7dnkmt", {
+        from_name: name,
+        message: msg,
+      });
+    }
+
+  </script>
 </body>
 
 </html>
