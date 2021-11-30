@@ -378,76 +378,6 @@ p {
 
 /* End skills Section */
 
-/* educations Section */
-
-#educations .educations {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#educations .education-top {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-#educations .education-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
-}
-
-#educations .education-item {
-	flex-basis: 80%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-#educations .education-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-
-#educations .education-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
-}
-
-#educations .education-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-#educations .education-item p {
-	color: white;
-	text-align: left;
-}
-
-/* End educations Section */
-
 /* Projects section */
 
 #projects .projects {
@@ -783,6 +713,7 @@ p {
 	}
 
 	/* End skills Section */
+	
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
@@ -855,6 +786,7 @@ p {
 	}
 
 	#contact .contact-item {
+		background-color: #29323c;
 		width: 30%;
 		margin: 0;
 		flex-direction: row;
@@ -907,7 +839,7 @@ p {
 
 	/* When moving the mouse over the submit button, add a darker green color */
 	#contact input[type=submit]:hover {
-		background-color: rgba(31, 30, 30, 0.24);
+		background-color: rgb(243, 10, 10);
 	}
 
 	/* End contact  */

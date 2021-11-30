@@ -17,6 +17,10 @@ document.addEventListener('scroll', () => {
 	}
 });
 
+// document.addEventListener('click', () => {
+// 	if(EventTarget.id)
+// })
+
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
 		hamburger.classList.toggle('active');
