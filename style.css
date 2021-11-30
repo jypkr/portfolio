@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 * {
 	padding: 0;
 	margin: 0;
@@ -307,9 +308,9 @@ p {
 
 /* End Hero Section */
 
-/* Services Section */
+/* skills Section */
 
-#services .services {
+#skills .skills {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
@@ -317,12 +318,12 @@ p {
 	padding: 100px 0;
 }
 
-#services .service-top {
+#skills .skill-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
 
-#services .service-bottom {
+#skills .skill-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -330,15 +331,14 @@ p {
 	margin-top: 50px;
 }
 
-#services .service-item {
+#skills .skill-item {
 	flex-basis: 80%;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
@@ -346,7 +346,77 @@ p {
 	overflow: hidden;
 }
 
-#services .service-item::after {
+#skills .skill-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #eb1212 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+
+#skills .skill-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+
+#skills .skill-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#skills .skill-item p {
+	color: white;
+	text-align: left;
+}
+
+/* End skills Section */
+
+/* educations Section */
+
+#educations .educations {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#educations .education-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#educations .education-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+#educations .education-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+#educations .education-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -358,25 +428,25 @@ p {
 	z-index: -1;
 }
 
-#services .service-bottom .icon {
+#educations .education-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
 
-#services .service-item h2 {
+#educations .education-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 
-#services .service-item p {
+#educations .education-item p {
 	color: white;
 	text-align: left;
 }
 
-/* End Services Section */
+/* End educations Section */
 
 /* Projects section */
 
@@ -417,7 +487,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #eb1212 0%, #485563 100%);
 	color: white;
 }
 
@@ -460,6 +530,10 @@ p {
 
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
 }
 
 /* End Projects section */
@@ -572,6 +646,26 @@ p {
 	font-weight: 500;
 }
 
+#contact .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+#contact .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+
+#contact .social-item img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+
+#contact .social-item:hover img {
+	filter: grayscale(0);
+}
+
 /*End contact Section */
 
 /* Footer */
@@ -630,6 +724,7 @@ p {
 		opacity: 1;
 		transform: scale(1);
 	}
+
 	100% {
 		opacity: 0;
 		transform: scale(1.4);
@@ -641,6 +736,7 @@ p {
 		width: 100%;
 		left: 0;
 	}
+
 	100% {
 		width: 0;
 		left: 100%;
@@ -669,49 +765,60 @@ p {
 		font-size: 2.5rem;
 		padding: 20px 60px;
 	}
+
 	h1.section-title {
 		font-size: 6rem;
 	}
+
 	/* Hero */
 	#hero h1 {
 		font-size: 7rem;
 	}
+
 	/* End Hero */
-	/* Services Section */
-	#services .service-bottom .service-item {
+	/* skills Section */
+	#skills .skill-bottom .skill-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+
+	/* End skills Section */
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
 	}
+
 	#projects .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
+
 	#projects .project-item {
 		height: 400px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	}
+
 	#projects .all-projects .project-info {
 		height: 100%;
 	}
+
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+
 	/* End Project */
 	/* About */
 	#about .about {
 		flex-direction: row;
 	}
+
 	#about .col-left {
 		width: 600px;
 		height: 400px;
 		padding-left: 60px;
 	}
+
 	#about .about .col-left .about-img::after {
 		left: -45px;
 		top: 34px;
@@ -719,13 +826,16 @@ p {
 		width: 98%;
 		border: 10px solid crimson;
 	}
+
 	#about .col-right {
 		text-align: left;
 		padding: 30px;
 	}
+
 	#about .col-right h1 {
 		text-align: left;
 	}
+
 	/* End About */
 	/* contact  */
 	#contact .contact {
@@ -735,6 +845,7 @@ p {
 		justify-content: center;
 		min-width: 20vh;
 	}
+
 	#contact .contact-items {
 		width: 100%;
 		display: flex;
@@ -742,23 +853,63 @@ p {
 		justify-content: space-evenly;
 		margin: 0;
 	}
+
 	#contact .contact-item {
 		width: 30%;
 		margin: 0;
 		flex-direction: row;
 	}
+
 	#contact .contact-item .icon {
 		height: 100px;
 		width: 100px;
 	}
+
 	#contact .contact-item .icon img {
 		object-fit: contain;
 	}
+
 	#contact .contact-item .contact-info {
 		width: 100%;
 		text-align: left;
 		padding-left: 20px;
 	}
+
+	/* Style inputs with type="text", select elements and textareas */
+	#contact input[type=text], select, textarea {
+		width: 100%;
+		/* Full width */
+		padding: 12px;
+		/* Some padding */
+		border: 1px solid #ccc;
+		/* Gray border */
+		border-radius: 4px;
+		/* Rounded borders */
+		box-sizing: border-box;
+		/* Make sure that padding and width stays in place */
+		margin-top: 6px;
+		/* Add a top margin */
+		margin-bottom: 16px;
+		/* Bottom margin */
+		resize: vertical
+			/* Allow the user to vertically resize the textarea (not horizontally) */
+	}
+
+	/* Style the submit button with a specific background color etc */
+	#contact input[type=submit] {
+		background-color: crimson;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	/* When moving the mouse over the submit button, add a darker green color */
+	#contact input[type=submit]:hover {
+		background-color: rgba(31, 30, 30, 0.24);
+	}
+
 	/* End contact  */
 }
 
@@ -767,10 +918,12 @@ p {
 /* Media Query For Desktop */
 
 @media only screen and (min-width: 1200px) {
+
 	/* header */
 	#header .hamburger {
 		display: none;
 	}
+
 	#header .nav-list ul {
 		position: initial;
 		display: block;
@@ -778,17 +931,21 @@ p {
 		width: fit-content;
 		background-color: transparent;
 	}
+
 	#header .nav-list ul li {
 		display: inline-block;
 	}
+
 	#header .nav-list ul li a {
 		font-size: 1.8rem;
 	}
+
 	#header .nav-list ul a:after {
 		display: none;
 	}
+
 	/* End header */
-	#services .service-bottom .service-item {
+	#skills .skill-bottom .skill-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
