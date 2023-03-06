@@ -383,12 +383,16 @@ p {
 /* End skills Section */
 
 /* Projects section */
+#projects {
+	background-color: #b6cae2;
+}
 
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 0;
+	
 }
 
 #projects .projects-header h1 {
@@ -530,6 +534,9 @@ p {
 /* End About Section */
 
 /* contact Section */
+#contact {
+	background-color: #b6cae2;
+}
 
 #contact .contact {
 	flex-direction: column;
